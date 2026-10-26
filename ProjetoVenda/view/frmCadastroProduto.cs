@@ -84,6 +84,7 @@ namespace ProjetoVenda.view
             produtoSelecionado.marca = this.txtMarca.Text;
             produtoSelecionado.preco = Convert.ToInt32(this.txtPreco.Text);
             produtoSelecionado.quantidade = (int)this.txtQuantidade.Value;
+
             bool resp = controller.atualizar(produtoSelecionado);
             if (resp)
             {
@@ -96,6 +97,7 @@ namespace ProjetoVenda.view
                 carregarProdutos();
                 this.btnAtualizar.Enabled = false;
                 this.btnExcluir.Enabled = false;
+                produtoSelecionado = null;
             }
             else
             {
@@ -122,6 +124,34 @@ namespace ProjetoVenda.view
             this.txtQuantidade.Value = produto.quantidade;
             produtoSelecionado = produto;
             this.btnAtualizar.Enabled = true;
+            this.btnExcluir.Enabled = true;
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            bool resp = controller.excluir(produtoSelecionado);
+            if (resp)
+            {
+                MessageBox.Show(
+                    "Produto excluido com sucesso",
+                    "Exclusão do produto",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information
+                    );
+                limparCampos();
+                carregarProdutos();
+                this.btnAtualizar.Enabled = false;
+                this.btnExcluir.Enabled = false;
+                produtoSelecionado = null;
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Erro ao excluir o produto!!",
+                    "Erro Exclusao",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error
+                    );
+            }
 
         }
     }
