@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "cN8RL8tUia4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jeff.rfsimoes\\source\\repos\\ProjetoVenda\\ProjetoVenda\\ProjetoVenda.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jeff.rfsimoes\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
+    "C:\\Users\\jeff.rfsimoes\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\jeff.rfsimoes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\jeff.rfsimoes\\.nuget\\packages\\mysqlconnector\\2.6.2\\mysqlconnector.2.6.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,156 @@
+﻿namespace ProjetoVenda.view
+{
+    partial class frmCadastroProduto
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroProduto));
+            txtNome = new TextBox();
+            txtMarca = new TextBox();
+            txtPreco = new TextBox();
+            txtQuantidade = new NumericUpDown();
+            button1 = new Button();
+            dgvProdutos = new DataGridView();
+            btnAtualizar = new Button();
+            btnExcluir = new Button();
+            ((System.ComponentModel.ISupportInitialize)txtQuantidade).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProdutos).BeginInit();
+            SuspendLayout();
+            // 
+            // txtNome
+            // 
+            txtNome.Location = new Point(36, 37);
+            txtNome.Name = "txtNome";
+            txtNome.PlaceholderText = "Nome";
+            txtNome.Size = new Size(287, 23);
+            txtNome.TabIndex = 0;
+            // 
+            // txtMarca
+            // 
+            txtMarca.Location = new Point(342, 37);
+            txtMarca.Name = "txtMarca";
+            txtMarca.PlaceholderText = "Marca";
+            txtMarca.Size = new Size(233, 23);
+            txtMarca.TabIndex = 1;
+            // 
+            // txtPreco
+            // 
+            txtPreco.Location = new Point(36, 85);
+            txtPreco.Name = "txtPreco";
+            txtPreco.PlaceholderText = "R$ 0000.00";
+            txtPreco.Size = new Size(184, 23);
+            txtPreco.TabIndex = 2;
+            // 
+            // txtQuantidade
+            // 
+            txtQuantidade.Location = new Point(243, 86);
+            txtQuantidade.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.Size = new Size(120, 23);
+            txtQuantidade.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(451, 85);
+            button1.Name = "button1";
+            button1.Size = new Size(124, 52);
+            button1.TabIndex = 4;
+            button1.Text = "Cadastrar Produto";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // dgvProdutos
+            // 
+            dgvProdutos.AllowUserToAddRows = false;
+            dgvProdutos.AllowUserToDeleteRows = false;
+            dgvProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProdutos.Location = new Point(27, 152);
+            dgvProdutos.MultiSelect = false;
+            dgvProdutos.Name = "dgvProdutos";
+            dgvProdutos.ReadOnly = true;
+            dgvProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProdutos.Size = new Size(728, 471);
+            dgvProdutos.TabIndex = 5;
+            dgvProdutos.CellDoubleClick += dgvProdutos_CellDoubleClick;
+            // 
+            // btnAtualizar
+            // 
+            btnAtualizar.Enabled = false;
+            btnAtualizar.Location = new Point(634, 26);
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(112, 46);
+            btnAtualizar.TabIndex = 6;
+            btnAtualizar.Text = "Atualizar";
+            btnAtualizar.UseVisualStyleBackColor = true;
+            btnAtualizar.Click += btnAtualizar_Click;
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.Enabled = false;
+            btnExcluir.Location = new Point(634, 85);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(112, 52);
+            btnExcluir.TabIndex = 7;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // frmCadastroProduto
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(781, 647);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnAtualizar);
+            Controls.Add(dgvProdutos);
+            Controls.Add(button1);
+            Controls.Add(txtQuantidade);
+            Controls.Add(txtPreco);
+            Controls.Add(txtMarca);
+            Controls.Add(txtNome);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "frmCadastroProduto";
+            Text = "Cadastro de Produtos";
+            Load += frmCadastroProduto_Load;
+            ((System.ComponentModel.ISupportInitialize)txtQuantidade).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProdutos).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private TextBox txtNome;
+        private TextBox txtMarca;
+        private TextBox txtPreco;
+        private NumericUpDown txtQuantidade;
+        private Button button1;
+        private DataGridView dgvProdutos;
+        private Button btnAtualizar;
+        private Button btnExcluir;
+    }
+}
