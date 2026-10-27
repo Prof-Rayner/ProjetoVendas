@@ -37,6 +37,9 @@
             dgvProdutos = new DataGridView();
             btnAtualizar = new Button();
             btnExcluir = new Button();
+            btnAnterior = new Button();
+            btnProximo = new Button();
+            lblPaginas = new Label();
             ((System.ComponentModel.ISupportInitialize)txtQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProdutos).BeginInit();
             SuspendLayout();
@@ -120,11 +123,43 @@
             btnExcluir.UseVisualStyleBackColor = true;
             btnExcluir.Click += btnExcluir_Click;
             // 
+            // btnAnterior
+            // 
+            btnAnterior.Location = new Point(27, 643);
+            btnAnterior.Name = "btnAnterior";
+            btnAnterior.Size = new Size(95, 56);
+            btnAnterior.TabIndex = 8;
+            btnAnterior.Text = "< Anterior";
+            btnAnterior.UseVisualStyleBackColor = true;
+            btnAnterior.Click += btnAnterior_Click;
+            // 
+            // btnProximo
+            // 
+            btnProximo.Location = new Point(668, 643);
+            btnProximo.Name = "btnProximo";
+            btnProximo.Size = new Size(87, 56);
+            btnProximo.TabIndex = 9;
+            btnProximo.Text = "Proximo >";
+            btnProximo.UseVisualStyleBackColor = true;
+            btnProximo.Click += btnProximo_Click;
+            // 
+            // lblPaginas
+            // 
+            lblPaginas.Location = new Point(196, 643);
+            lblPaginas.Name = "lblPaginas";
+            lblPaginas.Size = new Size(402, 56);
+            lblPaginas.TabIndex = 10;
+            lblPaginas.Text = "Pagina 1 de 5";
+            lblPaginas.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frmCadastroProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(781, 647);
+            ClientSize = new Size(781, 732);
+            Controls.Add(lblPaginas);
+            Controls.Add(btnProximo);
+            Controls.Add(btnAnterior);
             Controls.Add(btnExcluir);
             Controls.Add(btnAtualizar);
             Controls.Add(dgvProdutos);
@@ -153,5 +188,8 @@
         private DataGridView dgvProdutos;
         private Button btnAtualizar;
         private Button btnExcluir;
+        private Button btnAnterior;
+        private Button btnProximo;
+        private Label lblPaginas;
     }
 }

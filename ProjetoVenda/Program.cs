@@ -10,15 +10,15 @@ namespace ProjetoVenda
         {
 
             ApplicationConfiguration.Initialize();
-            //Application.Run(new frmCadastroProduto());
+            Application.Run(new frmCadastroProduto());
 
-            using (frmLogin login = new frmLogin())
-            {
-                if (login.ShowDialog() == DialogResult.OK)
-                {
-                    Application.Run(new frmPrincipal());
-                }
-            }
+            //using (frmLogin login = new frmLogin())
+            //{
+            //    if (login.ShowDialog() == DialogResult.OK)
+            //    {
+            //        Application.Run(new frmPrincipal());
+            //    }
+            //}
 
 
         }

@@ -14,6 +14,10 @@ namespace ProjetoVenda.view
     {
         private ProductController controller;
         private Product? produtoSelecionado;
+        private int totalDePaginas = 5;
+        private int paginaAtual = 1;
+        private int totalPorPagina = 5;
+
 
         public frmCadastroProduto()
         {
@@ -59,14 +63,24 @@ namespace ProjetoVenda.view
         {
             //finalizar listar os produtos
             carregarProdutos();
+            //int paginas = controller.quantidadePaginas(5);
+            //lblPaginas.Text = $" 1 de {paginas}";
 
         }
 
         private void carregarProdutos()
         {
-            List<Product> list = controller.getAll();
+            List<Product> list = controller.listarPorPagina(totalPorPagina, paginaAtual);
             this.dgvProdutos.DataSource = list;
             this.dgvProdutos.Columns["cod_funcionario"].Visible = false;
+
+            totalDePaginas = controller.quantidadePaginas(totalPorPagina);
+            if (paginaAtual > totalDePaginas)
+            {
+                paginaAtual = totalDePaginas;
+            }
+            atualizarLblPagina();
+
         }
 
         private void limparCampos()
@@ -153,6 +167,33 @@ namespace ProjetoVenda.view
                     );
             }
 
+        }
+
+
+        //  manipular as paginas
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (paginaAtual > 1)
+            {
+                paginaAtual--;
+                atualizarLblPagina();
+                carregarProdutos();
+            }
+        }
+
+        private void btnProximo_Click(object sender, EventArgs e)
+        {
+            if( paginaAtual < totalDePaginas)
+            {
+                paginaAtual++;
+                atualizarLblPagina();
+                carregarProdutos();
+            }
+        }
+
+        private void atualizarLblPagina()
+        {
+            this.lblPaginas.Text = $"Pagina {paginaAtual} de {totalDePaginas}";
         }
     }
 }
