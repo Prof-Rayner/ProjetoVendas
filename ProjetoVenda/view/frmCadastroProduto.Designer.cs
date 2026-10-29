@@ -40,6 +40,7 @@
             btnAnterior = new Button();
             btnProximo = new Button();
             lblPaginas = new Label();
+            cbxQuantidadeItens = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)txtQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProdutos).BeginInit();
             SuspendLayout();
@@ -72,6 +73,7 @@
             // 
             txtQuantidade.Location = new Point(243, 86);
             txtQuantidade.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            txtQuantidade.Minimum = new decimal(new int[] { 1, 0, 0, int.MinValue });
             txtQuantidade.Name = "txtQuantidade";
             txtQuantidade.Size = new Size(120, 23);
             txtQuantidade.TabIndex = 3;
@@ -84,7 +86,7 @@
             button1.TabIndex = 4;
             button1.Text = "Cadastrar Produto";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += btnCadastrar_Click;
             // 
             // dgvProdutos
             // 
@@ -92,12 +94,12 @@
             dgvProdutos.AllowUserToDeleteRows = false;
             dgvProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProdutos.Location = new Point(27, 152);
+            dgvProdutos.Location = new Point(12, 174);
             dgvProdutos.MultiSelect = false;
             dgvProdutos.Name = "dgvProdutos";
             dgvProdutos.ReadOnly = true;
             dgvProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProdutos.Size = new Size(728, 471);
+            dgvProdutos.Size = new Size(757, 449);
             dgvProdutos.TabIndex = 5;
             dgvProdutos.CellDoubleClick += dgvProdutos_CellDoubleClick;
             // 
@@ -106,7 +108,7 @@
             btnAtualizar.Enabled = false;
             btnAtualizar.Location = new Point(634, 26);
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.Size = new Size(112, 46);
+            btnAtualizar.Size = new Size(112, 34);
             btnAtualizar.TabIndex = 6;
             btnAtualizar.Text = "Atualizar";
             btnAtualizar.UseVisualStyleBackColor = true;
@@ -115,9 +117,9 @@
             // btnExcluir
             // 
             btnExcluir.Enabled = false;
-            btnExcluir.Location = new Point(634, 85);
+            btnExcluir.Location = new Point(634, 78);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(112, 52);
+            btnExcluir.Size = new Size(112, 34);
             btnExcluir.TabIndex = 7;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = true;
@@ -152,11 +154,24 @@
             lblPaginas.Text = "Pagina 1 de 5";
             lblPaginas.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // cbxQuantidadeItens
+            // 
+            cbxQuantidadeItens.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxQuantidadeItens.FormattingEnabled = true;
+            cbxQuantidadeItens.Items.AddRange(new object[] { "5", "10", "25", "50", "100" });
+            cbxQuantidadeItens.Location = new Point(621, 145);
+            cbxQuantidadeItens.Name = "cbxQuantidadeItens";
+            cbxQuantidadeItens.Size = new Size(125, 23);
+            cbxQuantidadeItens.TabIndex = 11;
+            cbxQuantidadeItens.SelectedIndexChanged += cbxQuantidadeItens_SelectedIndexChanged;
+            // 
             // frmCadastroProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(781, 732);
+            Controls.Add(cbxQuantidadeItens);
             Controls.Add(lblPaginas);
             Controls.Add(btnProximo);
             Controls.Add(btnAnterior);
@@ -168,6 +183,7 @@
             Controls.Add(txtPreco);
             Controls.Add(txtMarca);
             Controls.Add(txtNome);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmCadastroProduto";
             Text = "Cadastro de Produtos";
@@ -191,5 +207,6 @@
         private Button btnAnterior;
         private Button btnProximo;
         private Label lblPaginas;
+        private ComboBox cbxQuantidadeItens;
     }
 }

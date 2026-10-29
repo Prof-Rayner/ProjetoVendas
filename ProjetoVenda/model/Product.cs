@@ -14,5 +14,17 @@ namespace ProjetoVenda.model
         public int quantidade { get; set; }
         public DateTime data_registro { get; set; }
 
+        public void validar()
+        {
+            if (preco <= 0)
+            {
+                throw new ArgumentException("O preço nao pode Zerado!");
+            }
+            if (quantidade < 0)
+            {
+                throw new ArgumentException("O quantidade nao pode ser menor que Zero");
+            }
+        }
+
     }
 }

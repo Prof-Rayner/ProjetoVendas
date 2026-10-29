@@ -15,12 +15,13 @@ namespace ProjetoVenda.controller
             repository = new ProductRepository();
         }
 
-        public bool createProduct(Product product)
+        public bool createProduct(Product produto)
         {
             int cod_funcionario = Session.userAuth.cod_funcionario;
-            product.cod_funcionario = cod_funcionario;
-            // chamar a respository
-            repository.createProduct(product);
+            produto.cod_funcionario = cod_funcionario;
+            produto.validar();
+            // fazer o cadastro
+            repository.createProduct(produto);
 
             return true;
         }
@@ -41,7 +42,6 @@ namespace ProjetoVenda.controller
             int totalProdutos = repository.quantidadeProdutos();
             return (int)Math.Ceiling((decimal)totalProdutos / quantidadeItens);
         }
-
 
 
         public bool atualizar(Product product)
