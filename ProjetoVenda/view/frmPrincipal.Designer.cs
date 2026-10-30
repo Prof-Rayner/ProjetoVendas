@@ -33,9 +33,10 @@
             btnCadFuncionario = new Button();
             btnCadProduto = new Button();
             panel2 = new Panel();
+            txtPerfil = new Button();
+            btnSair = new Button();
             panel1 = new Panel();
             painelPrincipal = new Panel();
-            btnSair = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -70,6 +71,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(txtPerfil);
             panel2.Controls.Add(btnSair);
             panel2.Controls.Add(btnCadProduto);
             panel2.Controls.Add(lblUsername);
@@ -79,6 +81,26 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(192, 710);
             panel2.TabIndex = 4;
+            // 
+            // txtPerfil
+            // 
+            txtPerfil.Location = new Point(29, 575);
+            txtPerfil.Name = "txtPerfil";
+            txtPerfil.Size = new Size(104, 44);
+            txtPerfil.TabIndex = 4;
+            txtPerfil.Text = "button1";
+            txtPerfil.UseVisualStyleBackColor = true;
+            txtPerfil.Click += txtPerfil_Click;
+            // 
+            // btnSair
+            // 
+            btnSair.Location = new Point(29, 634);
+            btnSair.Name = "btnSair";
+            btnSair.Size = new Size(104, 44);
+            btnSair.TabIndex = 3;
+            btnSair.Text = "Sair";
+            btnSair.UseVisualStyleBackColor = true;
+            btnSair.Click += btnSair_Click;
             // 
             // panel1
             // 
@@ -95,16 +117,6 @@
             painelPrincipal.Name = "painelPrincipal";
             painelPrincipal.Size = new Size(817, 630);
             painelPrincipal.TabIndex = 6;
-            // 
-            // btnSair
-            // 
-            btnSair.Location = new Point(29, 634);
-            btnSair.Name = "btnSair";
-            btnSair.Size = new Size(104, 44);
-            btnSair.TabIndex = 3;
-            btnSair.Text = "Sair";
-            btnSair.UseVisualStyleBackColor = true;
-            btnSair.Click += btnSair_Click;
             // 
             // frmPrincipal
             // 
@@ -132,5 +144,6 @@
         private Panel panel1;
         private Panel painelPrincipal;
         private Button btnSair;
+        private Button txtPerfil;
     }
 }

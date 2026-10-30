@@ -70,5 +70,15 @@ namespace ProjetoVenda.controller
         }
 
 
+        public void deslogar()
+        {
+            Session.userAuth = null;
+        }
+
+        public Employee? usuarioAutenticado()
+        {
+            return Session.userAuth;
+        }
+
     }
 }

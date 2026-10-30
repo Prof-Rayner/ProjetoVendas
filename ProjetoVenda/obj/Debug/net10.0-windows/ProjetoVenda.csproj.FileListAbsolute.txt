@@ -23,3 +23,6 @@ C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-
 C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-windows\ProjetoVenda.view.frmCadastroFuncionario.resources
 C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\bin\Debug\net10.0-windows\BCrypt-Net-Next.dll
 C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-windows\ProjetoVenda.view.frmCadastroProduto.resources
+C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-windows\ProjetoVenda.sourcelink.json
+C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-windows\ProjetoVenda.Properties.Resources.resources
+C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-windows\ProjetoVenda.view.frmPerfil.resources

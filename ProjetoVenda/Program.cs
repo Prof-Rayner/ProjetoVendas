@@ -7,10 +7,10 @@ namespace ProjetoVenda
         
         [STAThread]
         static void Main()
-        {
+      {
 
             ApplicationConfiguration.Initialize();
-            //Application.Run(new frmCadastroProduto());
+            //Application.Run(new frmPerfil());
 
             while (true)
             {
