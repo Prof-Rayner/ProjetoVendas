@@ -88,7 +88,7 @@
             txtPerfil.Name = "txtPerfil";
             txtPerfil.Size = new Size(104, 44);
             txtPerfil.TabIndex = 4;
-            txtPerfil.Text = "button1";
+            txtPerfil.Text = "perfil";
             txtPerfil.UseVisualStyleBackColor = true;
             txtPerfil.Click += txtPerfil_Click;
             // 

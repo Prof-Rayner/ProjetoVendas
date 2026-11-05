@@ -39,6 +39,9 @@
             txtCep = new TextBox();
             btnCadastrar = new Button();
             txtSenha1 = new TextBox();
+            dgvFuncionarios = new DataGridView();
+            cbxAdm = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dgvFuncionarios).BeginInit();
             SuspendLayout();
             // 
             // txtNome
@@ -108,7 +111,7 @@
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(403, 221);
+            btnCadastrar.Location = new Point(446, 246);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(112, 50);
             btnCadastrar.TabIndex = 9;
@@ -125,11 +128,36 @@
             txtSenha1.Size = new Size(195, 23);
             txtSenha1.TabIndex = 8;
             // 
+            // dgvFuncionarios
+            // 
+            dgvFuncionarios.AllowUserToAddRows = false;
+            dgvFuncionarios.AllowUserToDeleteRows = false;
+            dgvFuncionarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFuncionarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFuncionarios.Location = new Point(12, 316);
+            dgvFuncionarios.MultiSelect = false;
+            dgvFuncionarios.Name = "dgvFuncionarios";
+            dgvFuncionarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvFuncionarios.Size = new Size(779, 375);
+            dgvFuncionarios.TabIndex = 10;
+            // 
+            // cbxAdm
+            // 
+            cbxAdm.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxAdm.FormattingEnabled = true;
+            cbxAdm.Items.AddRange(new object[] { "Funcionario", "Administrador" });
+            cbxAdm.Location = new Point(363, 198);
+            cbxAdm.Name = "cbxAdm";
+            cbxAdm.Size = new Size(195, 23);
+            cbxAdm.TabIndex = 11;
+            // 
             // frmCadastroFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(604, 329);
+            ClientSize = new Size(803, 704);
+            Controls.Add(cbxAdm);
+            Controls.Add(dgvFuncionarios);
             Controls.Add(txtSenha1);
             Controls.Add(btnCadastrar);
             Controls.Add(txtCep);
@@ -144,6 +172,8 @@
             Name = "frmCadastroFuncionario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Funcionario";
+            Load += frmCadastroFuncionario_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvFuncionarios).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,5 +190,7 @@
         private TextBox txtCep;
         private Button btnCadastrar;
         private TextBox txtSenha1;
+        private DataGridView dgvFuncionarios;
+        private ComboBox cbxAdm;
     }
 }

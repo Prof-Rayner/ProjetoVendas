@@ -203,6 +203,7 @@
             // 
             txtUsuario.Location = new Point(22, 47);
             txtUsuario.Name = "txtUsuario";
+            txtUsuario.ReadOnly = true;
             txtUsuario.Size = new Size(232, 23);
             txtUsuario.TabIndex = 13;
             // 

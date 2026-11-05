@@ -1,9 +1,11 @@
 ﻿using ProjetoVenda.controller;
+using ProjetoVenda.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,9 +13,11 @@ namespace ProjetoVenda.view
 {
     public partial class frmCadastroFuncionario : Form
     {
+        private EmployeeController controller;
         public frmCadastroFuncionario()
         {
             InitializeComponent();
+            controller = new EmployeeController();
         }
 
         private void limparCampos()
@@ -42,6 +46,10 @@ namespace ProjetoVenda.view
             string senha = this.txtSenha.Text;
             string senha1 = this.txtSenha1.Text;
 
+            bool adm = (this.cbxAdm.SelectedIndex == 0)? false: true;
+            //bool adm1 = this.cbxAdm.SelectedIndex == 1;
+            
+
             if (senha != senha1)
             {
                 MessageBox.Show(
@@ -53,10 +61,21 @@ namespace ProjetoVenda.view
             }
 
             // chamar o controlador do usuario para cadastro
-            EmployeeController controller = new EmployeeController();
+            Employee funcionario = new Employee
+            {
+                nome = nome,
+                telefone = telefone,
+                rua = rua,
+                numero = numero,
+                cep = cep,
+                complemento = complemento,
+                usuario = usuario,
+                senha = senha,
+                adm = adm
+            };
 
-            bool resp = controller.createEmployee(nome, telefone, rua, numero, cep, 
-                complemento, usuario, senha);
+
+            bool resp = controller.createEmployee(funcionario);
 
             if (resp)
             {
@@ -64,6 +83,7 @@ namespace ProjetoVenda.view
                     "Cadastro Funcionario",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limparCampos();
+                carregarFuncionarios();
             }
             else
             {
@@ -75,6 +95,20 @@ namespace ProjetoVenda.view
 
 
 
+        }
+
+        private void frmCadastroFuncionario_Load(object sender, EventArgs e)
+        {
+            carregarFuncionarios();
+            this.cbxAdm.SelectedIndex = 0;
+
+        }
+
+        private void carregarFuncionarios()
+        {
+            List<Employee> lista = controller.listarFuncionarios();
+            dgvFuncionarios.DataSource = lista;
+            dgvFuncionarios.Columns["senha"].Visible = false;
         }
     }
 }
