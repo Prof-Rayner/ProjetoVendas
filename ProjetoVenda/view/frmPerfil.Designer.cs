@@ -226,7 +226,7 @@
             Controls.Add(groupBox1);
             Controls.Add(pictureBox1);
             Name = "frmPerfil";
-            Text = "frmPerfil";
+            Text = "Perfil";
             Load += frmPerfil_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);

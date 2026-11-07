@@ -26,3 +26,4 @@ C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-
 C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-windows\ProjetoVenda.sourcelink.json
 C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-windows\ProjetoVenda.Properties.Resources.resources
 C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-windows\ProjetoVenda.view.frmPerfil.resources
+C:\Users\jeff.rfsimoes\source\repos\ProjetoVenda\ProjetoVenda\obj\Debug\net10.0-windows\ProjetoVenda.view.frmCadastroVenda.resources
