@@ -10,9 +10,9 @@ namespace ProjetoVenda
       {
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmCadastroVenda());
+            //Application.Run(new frmCadastroVenda());
 
-            while (false)
+            while (true)
             {
                 using (frmLogin login = new frmLogin())
                 {
