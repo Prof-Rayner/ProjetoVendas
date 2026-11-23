@@ -33,20 +33,26 @@
             btnCadFuncionario = new Button();
             btnCadProduto = new Button();
             panel2 = new Panel();
-            btnCadVenda = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             txtPerfil = new Button();
             btnSair = new Button();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            btnCadVenda = new Button();
+            pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            painelPrincipal = new Panel();
             lblTitulo = new Label();
+            painelPrincipal = new Panel();
             panel2.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
+            flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(45, 65);
+            lblUsername.Location = new Point(3, 252);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(97, 15);
             lblUsername.TabIndex = 0;
@@ -54,84 +60,125 @@
             // 
             // btnCadFuncionario
             // 
-            btnCadFuncionario.Location = new Point(33, 317);
+            btnCadFuncionario.Font = new Font("Segoe UI", 16F);
+            btnCadFuncionario.Image = Properties.Resources.funcionariopng_32x32;
+            btnCadFuncionario.Location = new Point(3, 167);
             btnCadFuncionario.Name = "btnCadFuncionario";
-            btnCadFuncionario.Size = new Size(104, 73);
+            btnCadFuncionario.Size = new Size(133, 82);
             btnCadFuncionario.TabIndex = 1;
-            btnCadFuncionario.Text = "Cadastrar Funcionario";
+            btnCadFuncionario.Text = "Funcionario";
+            btnCadFuncionario.TextImageRelation = TextImageRelation.TextAboveImage;
             btnCadFuncionario.UseVisualStyleBackColor = true;
             btnCadFuncionario.Click += btnCadFuncionario_Click;
             // 
             // btnCadProduto
             // 
-            btnCadProduto.Location = new Point(37, 121);
+            btnCadProduto.BackgroundImageLayout = ImageLayout.Zoom;
+            btnCadProduto.Font = new Font("Segoe UI", 16F);
+            btnCadProduto.Image = Properties.Resources.produtos_de_higiene;
+            btnCadProduto.Location = new Point(3, 3);
             btnCadProduto.Name = "btnCadProduto";
-            btnCadProduto.Size = new Size(96, 85);
+            btnCadProduto.Size = new Size(133, 78);
             btnCadProduto.TabIndex = 2;
-            btnCadProduto.Text = "Cadastrar Produto";
+            btnCadProduto.Text = "Produtos";
+            btnCadProduto.TextImageRelation = TextImageRelation.TextAboveImage;
             btnCadProduto.UseVisualStyleBackColor = true;
             btnCadProduto.Click += btnCadProduto_Click;
             // 
             // panel2
             // 
-            panel2.Controls.Add(btnCadVenda);
-            panel2.Controls.Add(txtPerfil);
-            panel2.Controls.Add(btnSair);
-            panel2.Controls.Add(btnCadProduto);
-            panel2.Controls.Add(lblUsername);
-            panel2.Controls.Add(btnCadFuncionario);
+            panel2.BackColor = SystemColors.ActiveCaption;
+            panel2.Controls.Add(flowLayoutPanel1);
+            panel2.Controls.Add(flowLayoutPanel2);
+            panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(192, 710);
+            panel2.Padding = new Padding(4);
+            panel2.Size = new Size(154, 579);
             panel2.TabIndex = 4;
             // 
-            // btnCadVenda
+            // flowLayoutPanel1
             // 
-            btnCadVenda.Location = new Point(33, 225);
-            btnCadVenda.Name = "btnCadVenda";
-            btnCadVenda.Size = new Size(104, 68);
-            btnCadVenda.TabIndex = 5;
-            btnCadVenda.Text = "Cadastrar Venda";
-            btnCadVenda.UseVisualStyleBackColor = true;
-            btnCadVenda.Click += btnCadVenda_Click;
+            flowLayoutPanel1.Controls.Add(txtPerfil);
+            flowLayoutPanel1.Controls.Add(btnSair);
+            flowLayoutPanel1.Dock = DockStyle.Bottom;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(4, 405);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(146, 170);
+            flowLayoutPanel1.TabIndex = 6;
             // 
             // txtPerfil
             // 
-            txtPerfil.Location = new Point(29, 575);
+            txtPerfil.Font = new Font("Segoe UI", 16F);
+            txtPerfil.Image = Properties.Resources.perfil1_32x32;
+            txtPerfil.Location = new Point(3, 3);
             txtPerfil.Name = "txtPerfil";
-            txtPerfil.Size = new Size(104, 44);
+            txtPerfil.Size = new Size(133, 79);
             txtPerfil.TabIndex = 4;
-            txtPerfil.Text = "perfil";
+            txtPerfil.Text = "Perfil";
+            txtPerfil.TextImageRelation = TextImageRelation.TextAboveImage;
             txtPerfil.UseVisualStyleBackColor = true;
             txtPerfil.Click += txtPerfil_Click;
             // 
             // btnSair
             // 
-            btnSair.Location = new Point(29, 634);
+            btnSair.Font = new Font("Segoe UI", 16F);
+            btnSair.Image = Properties.Resources.sair1_32x32;
+            btnSair.Location = new Point(3, 88);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(104, 44);
+            btnSair.Size = new Size(133, 79);
             btnSair.TabIndex = 3;
             btnSair.Text = "Sair";
+            btnSair.TextImageRelation = TextImageRelation.TextAboveImage;
             btnSair.UseVisualStyleBackColor = true;
             btnSair.Click += btnSair_Click;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Controls.Add(btnCadProduto);
+            flowLayoutPanel2.Controls.Add(btnCadVenda);
+            flowLayoutPanel2.Controls.Add(btnCadFuncionario);
+            flowLayoutPanel2.Controls.Add(lblUsername);
+            flowLayoutPanel2.Dock = DockStyle.Fill;
+            flowLayoutPanel2.Location = new Point(4, 84);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(146, 491);
+            flowLayoutPanel2.TabIndex = 7;
+            // 
+            // btnCadVenda
+            // 
+            btnCadVenda.Font = new Font("Segoe UI", 16F);
+            btnCadVenda.Image = Properties.Resources.venda;
+            btnCadVenda.Location = new Point(3, 87);
+            btnCadVenda.Name = "btnCadVenda";
+            btnCadVenda.Size = new Size(133, 74);
+            btnCadVenda.TabIndex = 5;
+            btnCadVenda.Text = "Venda";
+            btnCadVenda.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnCadVenda.UseVisualStyleBackColor = true;
+            btnCadVenda.Click += btnCadVenda_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Top;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(4, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(146, 80);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             panel1.Controls.Add(lblTitulo);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(192, 0);
+            panel1.Location = new Point(154, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(817, 80);
+            panel1.Size = new Size(716, 80);
             panel1.TabIndex = 5;
-            // 
-            // painelPrincipal
-            // 
-            painelPrincipal.Dock = DockStyle.Fill;
-            painelPrincipal.Location = new Point(192, 80);
-            painelPrincipal.Name = "painelPrincipal";
-            painelPrincipal.Size = new Size(817, 630);
-            painelPrincipal.TabIndex = 6;
             // 
             // lblTitulo
             // 
@@ -139,16 +186,24 @@
             lblTitulo.Font = new Font("Segoe UI Semibold", 26F, FontStyle.Bold);
             lblTitulo.Location = new Point(0, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(817, 80);
+            lblTitulo.Size = new Size(716, 80);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Titulo da Tela";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // painelPrincipal
+            // 
+            painelPrincipal.Dock = DockStyle.Fill;
+            painelPrincipal.Location = new Point(154, 80);
+            painelPrincipal.Name = "painelPrincipal";
+            painelPrincipal.Size = new Size(716, 499);
+            painelPrincipal.TabIndex = 6;
             // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1009, 710);
+            ClientSize = new Size(870, 579);
             Controls.Add(painelPrincipal);
             Controls.Add(panel1);
             Controls.Add(panel2);
@@ -157,7 +212,10 @@
             Text = "Tela Inicial";
             Load += frmPrincipal_Load;
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel2.ResumeLayout(false);
+            flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -174,5 +232,8 @@
         private Button txtPerfil;
         private Button btnCadVenda;
         private Label lblTitulo;
+        private PictureBox pictureBox1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flowLayoutPanel2;
     }
 }
