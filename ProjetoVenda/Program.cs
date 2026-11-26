@@ -1,5 +1,6 @@
 using ProjetoVenda.controle;
 using ProjetoVenda.formulario;
+using ProjetoVenda.modelo;
 using QuestPDF.Infrastructure;
 
 namespace ProjetoVenda
@@ -15,7 +16,17 @@ namespace ProjetoVenda
             ApplicationConfiguration.Initialize();
             //Application.Run(new frmCadastroVenda());
             //Relatorio relatorio = new Relatorio();
-            //relatorio.salvarPdf();
+            //List<Item> itens = new List<Item>();
+            //itens.Add(
+            //    new Item
+            //    {
+            //        nomeProduto = "Pera",
+            //        preco = 350,
+            //        quantidade = 4,
+            //    }
+            //);
+            //var documento = relatorio.gerarNota(itens);
+            //relatorio.salvarPdf(documento);
 
 
             while (true)
