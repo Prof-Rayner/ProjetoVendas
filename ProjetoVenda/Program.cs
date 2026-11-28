@@ -15,7 +15,7 @@ namespace ProjetoVenda
 
             ApplicationConfiguration.Initialize();
             //Application.Run(new frmCadastroVenda());
-            //Relatorio relatorio = new Relatorio();
+            Relatorio relatorio = new Relatorio();
             //List<Item> itens = new List<Item>();
             //itens.Add(
             //    new Item
@@ -27,9 +27,14 @@ namespace ProjetoVenda
             //);
             //var documento = relatorio.gerarNota(itens);
             //relatorio.salvarPdf(documento);
+            VendaControle vendaControle = new VendaControle();
+            List<Venda> lista = vendaControle.listarVendaMes(10, 2026);
+            var documento = relatorio.gerarRelatorioMensal(lista);
+            relatorio.salvarPdf(documento);
 
 
-            while (true)
+
+            while (false)
             {
                 using (frmLogin login = new frmLogin())
                 {
